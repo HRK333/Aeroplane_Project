@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-image: url('https://images.pexels.com/photos/1465904/pexels-photo-1465904.jpeg?cs=srgb&dl=pexels-nur-andi-ravsanjani-gusma-1465904.jpg&fm=jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flight Ticket Price Prediction</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Navigation</title>
+        <style>
+            .navbar{
+                background-color: rgb(71, 146, 226);
+                border-radius: 30px;
+                
+            }
+            .navbar ul{
+                overflow: auto;
+            }
+            .navbar li{
+                float:left;
+                list-style: none; 
+                margin: 13px 20px;
+                
+            }
+            .navbar li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: white;
+            }
+            .navbar li a:hover{
+                color: rgb(13, 9, 245)
+            }
+            .search{
+                float: right;
+                color: white;
+                padding: 12px 75px;
+            }
+            .navbar input{
+                border: 2px solid black;
+                border-radius: 14px;
+                padding: 3px 17px;
+                width: 129px;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Search this website">
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</head>
+
+<body>
+
+    <h1>Flight Ticket Price Prediction</h1>
+    <form method="POST" action="/predict_price">
+        <p>
+
+
+        <br>
+        <br>
+
+
+        <label>From:</label>
+        <select name = "Source">
+            <option value = "Select Source">Select</option>
+            <option value = "Delhi">Delhi</option>
+            <option value = "Kolkata">Kolkata</option>
+            <option value = "Banglore">Banglore</option>
+            <option value = "Mumbai">Mumbai</option>
+            <option value = "Chennai">Chennai</option>
+        
+                   
+        </select>
+
+        <br>
+        <br>
+
+        <label>To:</label>
+        <select name = "Destination">
+            <option value = "Select Destination">Select</option>
+            <option value = "Cochin">Cochin</option>
+            <option value = "Banglore">Banglore</option>
+            <option value = "Delhi">Delhi</option>
+            <option value = "New Delhi">New Delhi</option>
+            <option value = "Hyderabad">Hyderabad</option>
+            <option value = "Kolkata">Kolkata</option>
+                              
+        </select>
+
+        <br>
+        <br>
+        
+        <label>Airline:</label>
+        <select name = "Airline">
+            <option value = "Select Airline">Select</option>
+            <option value = "Jet Airways">Jet Airways</option>
+            <option value = "IndiGo">IndiGo</option>
+            <option value = "Air India">Air India</option>
+            <option value = "Multiple carriers">Multiple carriers</option>
+            <option value = "SpiceJet">SpiceJet</option>
+            <option value = "Vistara">Vistara</option>
+            <option value = "Air Asia">Air Asia</option>
+            <option value = "GoAir">GoAir</option>
+            <option value = "Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+            <option value = "Jet Airways Business">Jet Airways Business</option>
+            <option value = "Vistara Premium economy">Vistara Premium economy</option>
+            <option value = "Trujet">Trujet</option>
+            
+        </select>
+
+        <br>
+        <br>
+        <label>Total Stops:</label>
+        <select name = "Total_Stops">
+            <option value = "Select Stops">Select</option>
+            <option value = "1 stop">1 stop</option>
+            <option value = "non-stop">non-stop</option>
+            <option value = "2 stops">2 stops</option>
+            <option value = "3 stops">3 stops</option>
+            <option value = "4 stops">4 stops</option>
+            
+        </select>
+
+        <br>
+        <br>
+        <label>Duration:</label>
+        <input type = "text" name = "Duration">
+
+        </select>
+
+
+        <br>
+        <br>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        Flight ticket will be <b> Rs.{{ prediction }} </b> Only 
+        </p>
+    </form>
+
+ 
+</body>
+</html>
